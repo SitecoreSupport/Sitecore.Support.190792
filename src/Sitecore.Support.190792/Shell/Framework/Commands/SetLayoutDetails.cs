@@ -19,10 +19,7 @@ namespace Sitecore.Support.Shell.Framework.Commands
     protected override void Run(ClientPipelineArgs args)
     {
       Assert.ArgumentNotNull(args, "args");
-      if (!SheerResponse.CheckModified(new CheckModifiedParameters
-      {
-        ResumePreviousPipeline = true
-      }))
+      if (!SheerResponse.CheckModified())
       {
         return;
       }
